@@ -11,8 +11,7 @@ const router = express.Router();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/issues');
-
+mongoose.connect('mongodb://Oliver:hranolkz1@ds223253.mlab.com:23253/issues?authMechanism=SCRAM-SHA-1');
 const connection = mongoose.connection;
 
 connection.once('open', () => {
