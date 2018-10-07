@@ -1,12 +1,13 @@
 const bodyParser = require('body-parser');
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const Issue = require('./models/Issue');
 
 const app = express();
 const router = express.Router();
 
-
+app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb://Oliver:hranolkz1@ds223253.mlab.com:23253/issues?authMechanism=SCRAM-SHA-1');
